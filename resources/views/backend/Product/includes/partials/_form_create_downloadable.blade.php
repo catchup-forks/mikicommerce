@@ -191,7 +191,7 @@
                             </div><!--form control-->
 
                             <div class="form-group">
-                                {!! Form::label('meta_description', trans('category.category_meta_description'), ['class' => 'col-lg-2 control-label']) !!}
+                                {!! Form::label('meta_description', trans('categories'), ['class' => 'col-lg-2 control-label']) !!}
                                 <div class="col-lg-10">
                                     {!! Form::textarea('meta_description', null, ['class' => 'form-control','placeholder' => trans('category.category_meta_description')]) !!}
                                 </div>

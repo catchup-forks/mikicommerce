@@ -51,7 +51,7 @@ class FrontendCategoryController extends Controller
     public function index()
     {
         $categorys = $this->category->eagerLoad('category_description', 9);
-        return Theme::view('frontend.category.index', compact('categorys'));
+        return Theme::view('frontend.categories.index', compact('categorys'));
     }
 
     /**

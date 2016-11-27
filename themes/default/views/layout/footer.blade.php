@@ -1,126 +1,94 @@
-<!-- page footer top -->
-<footer class="page-footer-top">
-    <div class="grid-row">
-        <div class="grid-col grid-col-3">
-            <!-- about -->
-            <div class="widget-alt widget-alt-about">
-                <div class="head">Why Choose INNOVATE Ecommerce Framework</div>
-                <div class="cont">
-                    <ul>
-                        <li> Highly scalable Laravel Based E-commerce framework</li>
-                        <li> Free, Secure, Open Source,Blazing Fast,Small, Highly customizable and easy to setup
-                            E-commerce Framework
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!--/ about -->
-        </div>
 
-        <div class="grid-col grid-col-3">
-            <!-- contacts -->
-            <div class="widget-alt widget-alt-contacts">
-                <div class="head">Contact Info</div>
-                <div class="cont">
-                    <address><i class="fa fa-map-marker"></i>Bole International Airport,Addis Ababa Ethiopia</address>
-                    <ul>
-                        <li><i class="fa fa-mobile"></i>(+251)923780688</li>
-                        <li><i class="fa fa-mobile"></i>(+251) 913854712 3</li>
-                    </ul>
-                    <ul>
-                        <li><i class="fa fa-envelope-o"></i><a href="#">mail@tmgproduction.com</a></li>
-                        <li><i class="fa fa-link"></i><a href="#">www.tmgproduction.com</a></li>
-                    </ul>
-                    <ol>
-                        <li><a href="#" class="fa fa-twitter"></a></li><!--
-									-->
-                        <li><a href="#" class="fa fa-facebook"></a></li><!--
-									-->
-                        <li><a href="#" class="fa fa-skype"></a></li><!--
-									-->
-                        <li><a href="#" class="fa fa-rss"></a></li><!--
-									-->
-                        <li><a href="#" class="fa fa-dribbble"></a></li>
-                    </ol>
+  <!-- footer -->  
+  <footer id="aa-footer">
+    <!-- footer bottom -->
+    <div class="aa-footer-top">
+     <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+          <div class="aa-footer-top-area">
+            <div class="row">
+              <div class="col-md-3 col-sm-6">
+                <div class="aa-footer-widget">
+                  <h3>Main Menu</h3>
+                  <ul class="aa-footer-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Our Products</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                  </ul>
                 </div>
-            </div>
-            <!--/ contacts -->
-        </div>
-
-        <div class="grid-col grid-col-3">
-            <!-- recent posts -->
-            <div class="widget-alt widget-alt-posts">
-                <div class="head">Recent Posts</div>
-                <div class="cont">
-                    <ul>
-                        <li>
-                            <a href="#"><img src="{{ Theme::asset('default::pic/recent-posts/item-1.jpg') }}"
-                                             alt="item-1" width="58" height="58"/></a>
-                            <p><a href="#">Etiam mi sapien, luctus ac tempor quis</a><i
-                                        class="fa fa-angle-right"></i><span>October 16, 2014</span></p>
-                        </li>
-                        <li>
-                            <a href="#"><img src="{{ Theme::asset('default::pic/recent-posts/item-2.jpg') }}"
-                                             alt="item-1" width="58" height="58"/></a>
-                            <p><a href="#">Etiam mi sapien, luctus ac tempor quis</a><i
-                                        class="fa fa-angle-right"></i><span>October 12, 2014</span></p>
-                        </li>
-                        <li>
-                            <a href="#"><img src="{{ Theme::asset('default::pic/recent-posts/item-3.jpg') }} "
-                                             alt="item-1" width="58" height="58"/></a>
-                            <p><a href="#">Etiam mi sapien, luctus ac tempor quis</a><i
-                                        class="fa fa-angle-right"></i><span>October 10, 2014</span></p>
-                        </li>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="aa-footer-widget">
+                  <div class="aa-footer-widget">
+                    <h3>Knowledge Base</h3>
+                    <ul class="aa-footer-nav">
+                      <li><a href="#">Delivery</a></li>
+                      <li><a href="#">Returns</a></li>
+                      <li><a href="#">Services</a></li>
+                      <li><a href="#">Discount</a></li>
+                      <li><a href="#">Special Offer</a></li>
                     </ul>
+                  </div>
                 </div>
-            </div>
-            <!--/ recent posts -->
-        </div>
-
-        <div class="grid-col grid-col-3">
-            <!-- feedback -->
-            <div class="widget-alt widget-alt-feedback">
-                <div class="head">Shoot a Message</div>
-                <div class="cont">
-                    <form action="http://html.creaws.com/the8/php/contacts-process.php" method="post" id="widget-form">
-                        <input type="text" name="name" placeholder="Name">
-                        <input type="email" name="email" placeholder="E-mail">
-                        <textarea cols="30" rows="5" name="message" placeholder="Message"></textarea>
-                        <div id="widget_server_responce"></div>
-                        <div class="buttons">
-                            <button type="reset">Reset</button><!--
-										-->
-                            <button type="submit">Send</button>
-                        </div>
-                    </form>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="aa-footer-widget">
+                  <div class="aa-footer-widget">
+                    <h3>Useful Links</h3>
+                    <ul class="aa-footer-nav">
+                      <li><a href="#">Site Map</a></li>
+                      <li><a href="#">Search</a></li>
+                      <li><a href="#">Advanced Search</a></li>
+                      <li><a href="#">Suppliers</a></li>
+                      <li><a href="#">FAQ</a></li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="aa-footer-widget">
+                  <div class="aa-footer-widget">
+                    <h3>Contact Us</h3>
+                    <address>
+                      <p> 25 Astor Pl, NY 10003, USA</p>
+                      <p><span class="fa fa-phone"></span>+1 212-982-4589</p>
+                      <p><span class="fa fa-envelope"></span>dailyshop@gmail.com</p>
+                    </address>
+                    <div class="aa-footer-social">
+                      <a href="#"><span class="fa fa-facebook"></span></a>
+                      <a href="#"><span class="fa fa-twitter"></span></a>
+                      <a href="#"><span class="fa fa-google-plus"></span></a>
+                      <a href="#"><span class="fa fa-youtube"></span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!--/ feedback -->
+          </div>
         </div>
+      </div>
+     </div>
     </div>
-</footer>
-<!--/ page footer top -->
-<!-- page footer bottom -->
-<footer class="page-footer-bottom">
-    <div class="grid-row">
-        <!-- secondary nav -->
-        <nav class="secondary-nav">
-            <ul>
-                <li>{!! link_to('/', trans('navs.home')) !!}</li><!--
-							-->
-                <li>{!! link_to('/category', trans('innovate.menus.category')) !!}</li><!--
-							-->
-                <li>{!! link_to('/product', trans('innovate.menus.product')) !!}</li><!--
-							-->
-                <li>{!! link_to('/product/trend', trans('innovate.menus.trend_products')) !!}</li>
-
-            </ul>
-        </nav>
-        <!--/ secondary nav -->
-
-        <!-- copyrights -->
-        <div class="copyrights">© 2016 - "INNOVET E-commerce Framework. All rights reserved.</div>
-        <!--/ copyrights -->
+    <!-- footer-bottom -->
+    <div class="aa-footer-bottom">
+      <div class="container">
+        <div class="row">
+        <div class="col-md-12">
+          <div class="aa-footer-bottom-area">
+            <p>Designed by <a href="http://www.markups.io/">MarkUps.io</a></p>
+            <div class="aa-footer-payment">
+              <span class="fa fa-cc-mastercard"></span>
+              <span class="fa fa-cc-visa"></span>
+              <span class="fa fa-paypal"></span>
+              <span class="fa fa-cc-discover"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
     </div>
-</footer>
-<!--/ page footer bottom -->
+  </footer>
+  <!-- / footer -->

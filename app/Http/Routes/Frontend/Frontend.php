@@ -5,7 +5,7 @@
  */
 $router->get('/', 'FrontendController@index')->name('home');
 
-$router->get('/category', 'Category\FrontendCategoryController@index')->name('frontend.category');
+$router->get('/categories', 'Category\FrontendCategoryController@index')->name('frontend.category');
 
 $router->get('product/trend', 'Product\FrontendProductController@trends')->name('frontend.product.trends');
 //$router->get('product',  'Product\FrontendProductController@index')->name('frontend.product');

@@ -284,7 +284,7 @@ class EloquentProductRepository implements ProductContract
     {
         // $this->raise(new ProductWasPosted(new Product()));
 
-        return Product::with(['category', 'tax', 'product_attribute_category', 'varchar_values', 'text_values', 'int_values', 'product_translations' => function ($query) {
+        return Product::with(['categories', 'tax', 'product_attribute_category', 'varchar_values', 'text_values', 'int_values', 'product_translations' => function ($query) {
             $query->where('product_translations.locale', '=', App::getLocale());
         }])->paginate($per_page);
     }
@@ -292,7 +292,7 @@ class EloquentProductRepository implements ProductContract
     public function eagerLoadWhere($table, $product_id)
     {
         // $this->raise(new ProductWasPosted(new Product()));
-        return Product::with(['category', 'tax', 'product_attribute_category', 'varchar_values', 'text_values', 'int_values', 'product_translations' => function ($query) {
+        return Product::with(['categories', 'tax', 'product_attribute_category', 'varchar_values', 'text_values', 'int_values', 'product_translations' => function ($query) {
             //$query->orderBy('product.id', $product_id);
             $query->where('product_translations.locale', '=', App::getLocale());
         }])->find($product_id);

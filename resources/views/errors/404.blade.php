@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>{{ trans('strings.page_not_found') }}</title>
+    <title>404 page - {{ trans('strings.page_not_found') }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
     <style>
 
         * {
@@ -53,8 +54,8 @@
     </style>
 </head>
 <body>
-    <h1>{{ trans('strings.page_not_found') }}</h1>
-    <p>{{ trans('strings.sorry_page_you_were_trying') }}</p>
+<h1>{{ trans('strings.page_not_found') }}</h1>
+<p>{{ trans('strings.sorry_page_you_were_trying') }}</p>
 </body>
 </html>
 <!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->

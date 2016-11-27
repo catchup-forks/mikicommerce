@@ -1,209 +1,265 @@
-<!-- page header top -->
-<header class="page-header-top">
-    <div class="grid-row">
+
+  <!-- Start header section -->
+  <header id="aa-header">
+    <!-- start header top  -->
+    <div class="aa-header-top">
+      <div class="container">
         <div class="row">
-            <!-- language selector -->
-            <div class="language-selector">
-                <i class="fa fa-globe"></i>
-                <span>Change your language (if you like):</span>
-                <div>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                           aria-expanded="false">{{ trans('menus.language-picker.language') }} <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>{!! link_to('lang/en', trans('menus.language-picker.langs.en')) !!}</li>
-                        </ul>
-                    </li>
+          <div class="col-md-12">
+            <div class="aa-header-top-area">
+              <!-- start header top left -->
+              <div class="aa-header-top-left">
+                <!-- start language -->
+                <div class="aa-language">
+                  <div class="dropdown">
+                    <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <img src="img/flag/english.jpg" alt="english flag">ENGLISH
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a href="#"><img src="img/flag/french.jpg" alt="">FRENCH</a></li>
+                      <li><a href="#"><img src="img/flag/english.jpg" alt="">ENGLISH</a></li>
+                    </ul>
+                  </div>
                 </div>
+                <!-- / language -->
+
+                <!-- start currency -->
+                <div class="aa-currency">
+                  <div class="dropdown">
+                    <a class="btn dropdown-toggle" href="#" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                      <i class="fa fa-usd"></i>USD
+                      <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                      <li><a href="#"><i class="fa fa-euro"></i>EURO</a></li>
+                      <li><a href="#"><i class="fa fa-jpy"></i>YEN</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- / currency -->
+                <!-- start cellphone -->
+                <div class="cellphone hidden-xs">
+                  <p><span class="fa fa-phone"></span>00-62-658-658</p>
+                </div>
+                <!-- / cellphone -->
+              </div>
+              <!-- / header top left -->
+              <div class="aa-header-top-right">
+                <ul class="aa-head-top-nav-right">
+                  <li><a href="account.html">My Account</a></li>
+                  <li class="hidden-xs"><a href="wishlist.html">Wishlist</a></li>
+                  <li class="hidden-xs"><a href="cart.html">My Cart</a></li>
+                  <li class="hidden-xs"><a href="checkout.html">Checkout</a></li>
+                  <li><a href="" data-toggle="modal" data-target="#login-modal">Login</a></li>
+                </ul>
+              </div>
             </div>
-            <!--/ language selector -->
+          </div>
         </div>
-
-        <div class="row">
-            <!-- cart summary -->
-            @component_cart_summary()
-            <!--/ cart summary -->
-        </div>
-
-        <div class="row">
-            <!-- follow us -->
-            <div class="follow-us">
-                <a href="#" class="fa fa-contact">C</a>
-                <a href="#" class="fa fa-dribbble"></a>
-                <a href="#" class="fa fa-tumblr"></a>
-                <a href="#" class="fa fa-rss"></a>
-                <a href="#" class="fa fa-skype"></a>
-                <a href="#" class="fa fa-facebook"></a>
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-about">A</a>
-            </div>
-            <!--/ follow us -->
-        </div>
-
-        <a href="#" id="page-header-top-switcher" class="switcher"></a>
+      </div>
     </div>
-</header>
-<!--/ page header top -->
+    <!-- / header top  -->
 
-<!-- page header bottom -->
-<header id="page-header-bottom" class="page-header-bottom">
-    <div class="grid-row">
-        <!-- logo -->
-        <a href="index-2.html" class="logo">
-            <img src="{{ Theme::asset('default::img/logo.png') }}" alt="">
-        </a>
-        <!--/ logo -->
-
-        <!-- main nav -->
-        <nav class="main-nav">
-            <ul>
-                <li>
-                    {!! link_to('/', trans('navs.home')) !!}
-
-                </li>
-                <li>
-                    {!! link_to('/category', trans('innovate.menus.category')) !!}
-
-                </li>
-                <li>
-                    {!! link_to('/product', trans('innovate.menus.product')) !!}
-
-                </li>
-                <li>
-                    {!! link_to('/product/trend', trans('innovate.menus.trend_products')) !!}
-                </li>
-
-                @if (Auth::guest())
-                    <li>{!! link_to('auth/login', trans('navs.login')) !!}</li>
-                    <li>{!! link_to('auth/register', trans('navs.register')) !!}</li>
-                @else
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                           aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>{!! link_to('activity_logs', trans('activity.navs.activity_log')) !!}</li>
-
-                            @if (access()->user()->canChangePassword())
-                                <li>{!! link_to('auth/password/change', trans('navs.change_password')) !!}</li>
-                            @endif
-
-                            @permission('view-backend')
-                            <li>{!! link_to_route('admin.dashboard', trans('navs.administration')) !!}</li>
-                            @endauth
-
-                            <li>{!! link_to('auth/logout', trans('navs.logout')) !!}</li>
-                        </ul>
+    <!-- start header bottom  -->
+    <div class="aa-header-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="aa-header-bottom-area">
+              <!-- logo  -->
+              <div class="aa-logo">
+                <!-- Text based logo -->
+                <a href="index.html">
+                  <span class="fa fa-shopping-cart"></span>
+                  <p>daily<strong>Shop</strong> <span>Your Shopping Partner</span></p>
+                </a>
+                <!-- img based logo -->
+                <!-- <a href="index.html"><img src="img/logo.jpg" alt="logo img"></a> -->
+              </div>
+              <!-- / logo  -->
+               <!-- cart box -->
+              <div class="aa-cartbox">
+                <a class="aa-cart-link" href="#">
+                  <span class="fa fa-shopping-basket"></span>
+                  <span class="aa-cart-title">SHOPPING CART</span>
+                  <span class="aa-cart-notify">2</span>
+                </a>
+                <div class="aa-cartbox-summary">
+                  <ul>
+                    <li>
+                      <a class="aa-cartbox-img" href="#"><img src="img/woman-small-2.jpg" alt="img"></a>
+                      <div class="aa-cartbox-info">
+                        <h4><a href="#">Product Name</a></h4>
+                        <p>1 x $250</p>
+                      </div>
+                      <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
                     </li>
-                @endif
-
-            </ul>
-        </nav>
-        <!--/ main nav -->
-
-        <!-- mobile nav -->
-        <nav id="mobile-nav" class="mobile-nav">
-            <a href="#mobile-nav-1" class="switcher"><i class="fa fa-align-justify"></i></a>
-            <ul id="mobile-nav-1">
-                <li><a href="#mobile-nav-7" class="opener"><i class="fa fa-angle-right"></i>Home</a></li>
-                <li><a href="#mobile-nav-2" class="opener active"><i class="fa fa-angle-right"></i>Features</a></li>
-                <li><a href="#mobile-nav-3" class="opener"><i class="fa fa-angle-right"></i>Pages</a></li>
-                <li><a href="#mobile-nav-4" class="opener"><i class="fa fa-angle-right"></i>Portfolio</a></li>
-                <li><a href="#mobile-nav-5" class="opener"><i class="fa fa-angle-right"></i>Blog</a></li>
-                <li><a href="#mobile-nav-6" class="opener"><i class="fa fa-angle-right"></i>Shop</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
-            </ul>
-            <ul id="mobile-nav-7">
-                <li><a href="#mobile-nav-1" class="back"><em>&larr;</em> &nbsp;BACK</a></li>
-                <li><a href="index-2.html">Default Style</a></li>
-                <li><a href="index-blog.html">Blog Style</a></li>
-                <li><a href="index-parallax.html">Parallax Style</a></li>
-                <li><a href="index-video.html">Background Video</a></li>
-            </ul>
-            <ul id="mobile-nav-2">
-                <li><a href="#mobile-nav-1" class="back"><em>&larr;</em> &nbsp;BACK</a></li>
-                <li><a href="iOS8-inspired.html" class="active">iOS8 Inspired Design</a></li>
-                <li><a href="woo-ready.html">Woo-Ready</a></li>
-                <li><a href="#mobile-nav-8" class="opener"><i class="fa fa-angle-right"></i>Content Elements</a></li>
-            </ul>
-            <ul id="mobile-nav-8">
-                <li><a href="#mobile-nav-2" class="back"><em>&larr;</em> &nbsp;BACK</a></li>
-                <li><a href="feature-accordion.html">Accordion</a></li>
-                <li><a href="feature-buttons.html">Buttons</a></li>
-                <li><a href="feature-callout.html">Callout</a></li>
-                <li><a href="feature-chart-graph.html">Chart Graph</a></li>
-                <li><a href="feature-chart-pie.html">Chart Pie</a></li>
-                <li><a href="feature-chart-circle.html">Chart Circle</a></li>
-                <li><a href="feature-columns.html">Columns</a></li>
-                <li><a href="feature-dividers.html">Dividers</a></li>
-                <li><a href="feature-icons.html">Icons</a></li>
-                <li><a href="feature-lists.html">Lists</a></li>
-                <li><a href="feature-messages.html">Messages</a></li>
-                <li><a href="feature-milestone.html">Milestone</a></li>
-                <li><a href="feature-pricing-table.html">Pricing Table</a></li>
-                <li><a href="feature-progress-bar.html">Progress Bar</a></li>
-                <li><a href="feature-services.html">Services</a></li>
-                <li><a href="feature-tabs.html">Tabs</a></li>
-                <li><a href="feature-team.html">Team</a></li>
-                <li><a href="feature-testimonials.html">Testimonials</a></li>
-                <li><a href="feature-toggle.html">Toggle</a></li>
-                <li><a href="feature-twitter.html">Twitter</a></li>
-                <li><a href="feature-twitter-carousel.html">Twitter Carousel</a></li>
-                <li><a href="feature-video.html">Video</a></li>
-            </ul>
-            <ul id="mobile-nav-3">
-                <li><a href="#mobile-nav-1" class="back"><em>&larr;</em> &nbsp;BACK</a></li>
-                <li><a href="page-404.html" class="active">404 page</a></li>
-                <li><a href="page-about.html">About us</a></li>
-                <li><a href="page-coming.html">Coming soon</a></li>
-                <li><a href="page-faq.html">FAQ</a></li>
-                <li><a href="page-team.html">Our team</a></li>
-                <li><a href="page-process.html">Our process</a></li>
-                <li><a href="page-progress.html">Our progress</a></li>
-                <li><a href="page-services.html">Our services</a></li>
-                <li><a href="page-sitemap.html">Sitemap</a></li>
-                <li><a href="page-sidebar-one.html">With one sidebar</a></li>
-                <li><a href="page-sidebar-two.html">With two sidebars</a></li>
-                <li><a href="page-sidebar-none.html">Full width</a></li>
-            </ul>
-            <ul id="mobile-nav-4">
-                <li><a href="#mobile-nav-1" class="back"><em>&larr;</em> &nbsp;BACK</a></li>
-                <li><a href="portfolio-four.html">Four columns</a></li>
-                <li><a href="portfolio-three.html">Three columns</a></li>
-                <li><a href="portfolio-two.html">Two columns</a></li>
-                <li><a href="portfolio-one.html">One column</a></li>
-                <li><a href="portfolio-gallery.html">Gallery</a></li>
-                <li><a href="portfolio-single.html">Single item</a></li>
-            </ul>
-            <ul id="mobile-nav-5">
-                <li><a href="#mobile-nav-1" class="back"><em>&larr;</em> &nbsp;BACK</a></li>
-                <li><a href="blog.html">Regular view</a></li>
-                <li><a href="blog-three.html">Three columns</a></li>
-                <li><a href="blog-two.html">Two columns</a></li>
-                <li><a href="blog-one.html">One column</a></li>
-                <li><a href="blog-single.html">Single post</a></li>
-            </ul>
-            <ul id="mobile-nav-6">
-                <li><a href="#mobile-nav-1" class="back"><em>&larr;</em> &nbsp;BACK</a></li>
-                <li><a href="shop-catalog.html">Catalog</a></li>
-                <li><a href="shop-product.html">Product</a></li>
-                <li><a href="shop-cart.html">Cart</a></li>
-            </ul>
-        </nav>
-        <!--/ main nav -->
+                    <li>
+                      <a class="aa-cartbox-img" href="#"><img src="img/woman-small-1.jpg" alt="img"></a>
+                      <div class="aa-cartbox-info">
+                        <h4><a href="#">Product Name</a></h4>
+                        <p>1 x $250</p>
+                      </div>
+                      <a class="aa-remove-product" href="#"><span class="fa fa-times"></span></a>
+                    </li>                    
+                    <li>
+                      <span class="aa-cartbox-total-title">
+                        Total
+                      </span>
+                      <span class="aa-cartbox-total-price">
+                        $500
+                      </span>
+                    </li>
+                  </ul>
+                  <a class="aa-cartbox-checkout aa-primary-btn" href="checkout.html">Checkout</a>
+                </div>
+              </div>
+              <!-- / cart box -->
+              <!-- search box -->
+              <div class="aa-search-box">
+                <form action="">
+                  <input type="text" name="" id="" placeholder="Search here ex. 'man' ">
+                  <button type="submit"><span class="fa fa-search"></span></button>
+                </form>
+              </div>
+              <!-- / search box -->             
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</header>
-<!--/ page header bottom -->
-<div id="page-header-bottom-holder" class="page-header-bottom-holder"></div>
-
-<!-- page title -->
-<div class="page-title">
-    <div class="grid-row">
-        <h1><i class="fa fa-angle-right"></i> {{ app_name() }}</h1>
-
-        <nav class="bread-crumbs">
-            <a href="#">Home</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;
-            <span>{{ app_name() }}</span>
-        </nav>
+    <!-- / header bottom  -->
+  </header>
+  <!-- / header section -->
+  <!-- menu -->
+  <section id="menu">
+    <div class="container">
+      <div class="menu-area">
+        <!-- Navbar -->
+        <div class="navbar navbar-default" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>          
+          </div>
+          <div class="navbar-collapse collapse">
+            <!-- Left nav -->
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Men <span class="caret"></span></a>
+                <ul class="dropdown-menu">                
+                  <li><a href="#">Casual</a></li>
+                  <li><a href="#">Sports</a></li>
+                  <li><a href="#">Formal</a></li>
+                  <li><a href="#">Standard</a></li>                                                
+                  <li><a href="#">T-Shirts</a></li>
+                  <li><a href="#">Shirts</a></li>
+                  <li><a href="#">Jeans</a></li>
+                  <li><a href="#">Trousers</a></li>
+                  <li><a href="#">And more.. <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Sleep Wear</a></li>
+                      <li><a href="#">Sandals</a></li>
+                      <li><a href="#">Loafers</a></li>                                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">Women <span class="caret"></span></a>
+                <ul class="dropdown-menu">  
+                  <li><a href="#">Kurta & Kurti</a></li>                                                                
+                  <li><a href="#">Trousers</a></li>              
+                  <li><a href="#">Casual</a></li>
+                  <li><a href="#">Sports</a></li>
+                  <li><a href="#">Formal</a></li>                
+                  <li><a href="#">Sarees</a></li>
+                  <li><a href="#">Shoes</a></li>
+                  <li><a href="#">And more.. <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Sleep Wear</a></li>
+                      <li><a href="#">Sandals</a></li>
+                      <li><a href="#">Loafers</a></li>
+                      <li><a href="#">And more.. <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Rings</a></li>
+                          <li><a href="#">Earrings</a></li>
+                          <li><a href="#">Jewellery Sets</a></li>
+                          <li><a href="#">Lockets</a></li>
+                          <li class="disabled"><a class="disabled" href="#">Disabled item</a></li>                       
+                          <li><a href="#">Jeans</a></li>
+                          <li><a href="#">Polo T-Shirts</a></li>
+                          <li><a href="#">SKirts</a></li>
+                          <li><a href="#">Jackets</a></li>
+                          <li><a href="#">Tops</a></li>
+                          <li><a href="#">Make Up</a></li>
+                          <li><a href="#">Hair Care</a></li>
+                          <li><a href="#">Perfumes</a></li>
+                          <li><a href="#">Skin Care</a></li>
+                          <li><a href="#">Hand Bags</a></li>
+                          <li><a href="#">Single Bags</a></li>
+                          <li><a href="#">Travel Bags</a></li>
+                          <li><a href="#">Wallets & Belts</a></li>                        
+                          <li><a href="#">Sunglases</a></li>
+                          <li><a href="#">Nail</a></li>                       
+                        </ul>
+                      </li>                   
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">Kids <span class="caret"></span></a>
+                <ul class="dropdown-menu">                
+                  <li><a href="#">Casual</a></li>
+                  <li><a href="#">Sports</a></li>
+                  <li><a href="#">Formal</a></li>
+                  <li><a href="#">Standard</a></li>                                                
+                  <li><a href="#">T-Shirts</a></li>
+                  <li><a href="#">Shirts</a></li>
+                  <li><a href="#">Jeans</a></li>
+                  <li><a href="#">Trousers</a></li>
+                  <li><a href="#">And more.. <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Sleep Wear</a></li>
+                      <li><a href="#">Sandals</a></li>
+                      <li><a href="#">Loafers</a></li>                                      
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#">Sports</a></li>
+             <li><a href="#">Digital <span class="caret"></span></a>
+                <ul class="dropdown-menu">                
+                  <li><a href="#">Camera</a></li>
+                  <li><a href="#">Mobile</a></li>
+                  <li><a href="#">Tablet</a></li>
+                  <li><a href="#">Laptop</a></li>                                                
+                  <li><a href="#">Accesories</a></li>                
+                </ul>
+              </li>
+              <li><a href="#">Furniture</a></li>            
+              <li><a href="blog-archive.html">Blog <span class="caret"></span></a>
+                <ul class="dropdown-menu">                
+                  <li><a href="blog-archive.html">Blog Style 1</a></li>
+                  <li><a href="blog-archive-2.html">Blog Style 2</a></li>
+                  <li><a href="blog-single.html">Blog Single</a></li>                
+                </ul>
+              </li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="#">Pages <span class="caret"></span></a>
+                <ul class="dropdown-menu">                
+                  <li><a href="product.html">Shop Page</a></li>
+                  <li><a href="product-detail.html">Shop Single</a></li>                
+                  <li><a href="404.html">404 Page</a></li>                
+                </ul>
+              </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>       
     </div>
-</div>
-<!--/ page title -->
+  </section>
+  <!-- / menu -->

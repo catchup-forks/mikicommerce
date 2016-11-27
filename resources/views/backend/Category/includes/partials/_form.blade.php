@@ -104,7 +104,7 @@
                     <div class="form-group">
                         {!! Form::label('description_am', trans('category.description_am'), ['class' => 'col-lg-2 control-label']) !!}
                         <div class="col-lg-10">
-                            {!! Form::textarea('description_am', null, ['class' => 'form-control', 'placeholder' => trans('category.description_am')]) !!}
+                            {!! Form::textarea('description_am', null, ['class' => 'form-control', 'placeholder' => trans('categories')]) !!}
                         </div>
                     </div><!--form control-->
 
