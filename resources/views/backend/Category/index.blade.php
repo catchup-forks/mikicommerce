@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="alert alert-info">
-                <i class="fa fa-info-circle"></i> Here are the list of Categorys and sub category.<br />
+                <i class="fa fa-info-circle"></i> Here is the list of Categories and subcategories.<br />
                 <a href="{{route('admin.category.create')}}"><i class="fa fa-plus"> </i> {{ trans('category.add_new_category') }}</a>
             </div><!--alert info-->
 
