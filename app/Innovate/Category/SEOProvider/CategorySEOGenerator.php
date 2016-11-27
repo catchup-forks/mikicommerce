@@ -55,7 +55,7 @@ class CategorySEOGenerator implements SEOProviderContract
         OpenGraph::setUrl(config('app.url'));
         OpenGraph::addProperty('type', 'article');
         OpenGraph::addProperty('locale', 'en-us');
-        OpenGraph::addProperty('locale:alternate', ['am-et']);
+        //OpenGraph::addProperty('locale:alternate', ['am-et']);
 
         OpenGraph::addImage(['url' => config('app.url').'/app/innovate/product/'.$category->image, 'size' => 300]);
     }

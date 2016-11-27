@@ -5,13 +5,13 @@
             <!-- language selector -->
             <div class="language-selector">
                 <i class="fa fa-globe"></i>
-                <span>Change your language:</span>
+                <span>Change your language (if you like):</span>
                 <div>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ trans('menus.language-picker.language') }} <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-expanded="false">{{ trans('menus.language-picker.language') }} <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li>{!! link_to('lang/en', trans('menus.language-picker.langs.en')) !!}</li>
-                            <li>{!! link_to('lang/am', trans('menus.language-picker.langs.am')) !!}</li>
                         </ul>
                     </li>
                 </div>
@@ -21,7 +21,7 @@
 
         <div class="row">
             <!-- cart summary -->
-               @component_cart_summary()
+            @component_cart_summary()
             <!--/ cart summary -->
         </div>
 
@@ -73,12 +73,13 @@
                     {!! link_to('/product/trend', trans('innovate.menus.trend_products')) !!}
                 </li>
 
-                    @if (Auth::guest())
-                <li>{!! link_to('auth/login', trans('navs.login')) !!}</li>
-                <li>{!! link_to('auth/register', trans('navs.register')) !!}</li>
+                @if (Auth::guest())
+                    <li>{!! link_to('auth/login', trans('navs.login')) !!}</li>
+                    <li>{!! link_to('auth/register', trans('navs.register')) !!}</li>
                 @else
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-expanded="false">{{ Auth::user()->name }} <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li>{!! link_to('activity_logs', trans('activity.navs.activity_log')) !!}</li>
 
@@ -93,7 +94,7 @@
                             <li>{!! link_to('auth/logout', trans('navs.logout')) !!}</li>
                         </ul>
                     </li>
-                    @endif
+                @endif
 
             </ul>
         </nav>

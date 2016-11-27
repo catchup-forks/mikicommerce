@@ -11,8 +11,11 @@ class LanguageController extends Controller
 {
     public function languageRoute($lang)
     {
-        session()->put('locale', $lang);
-
+        if ($lang != 'en') {
+            dd($lang);
+        } else {
+            session()->put('locale', $lang);
+        }
         return redirect()->back();
     }
 }

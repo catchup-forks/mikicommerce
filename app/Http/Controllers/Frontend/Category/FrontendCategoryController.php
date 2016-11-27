@@ -50,8 +50,8 @@ class FrontendCategoryController extends Controller
      */
     public function index()
     {
-        return Theme::view('frontend.category.index')
-            ->withCategorys($this->category->eagerLoad('category_description', 9));
+        $categorys = $this->category->eagerLoad('category_description', 9);
+        return Theme::view('frontend.category.index', compact('categorys'));
     }
 
     /**
@@ -61,8 +61,8 @@ class FrontendCategoryController extends Controller
      */
     public function create()
     {
-        return view('backend.category.create')
-            ->withCategorys($this->category->eagerLoad('category_description'));
+        $categorys = $this->category->eagerLoad('category_description');
+        return view('backend.category.create', compact('categorys'));
     }
 
     /**
@@ -107,10 +107,8 @@ class FrontendCategoryController extends Controller
     {
         $category = $this->category->findOrThrowException($id);
         $seo->set($category);
-
-        return view('backend.category.show')
-            ->withCategory($category)
-            ->withCategorys($this->category->eagerLoad('category_description'));
+        $categorys = $this->category->eagerLoad('category_description');
+        return view('backend.category.show', compact('category', 'categorys'));
     }
 
     /**

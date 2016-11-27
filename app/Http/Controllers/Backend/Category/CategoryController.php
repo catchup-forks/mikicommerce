@@ -50,8 +50,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        return view('backend.Category.index')
-            ->withCategorys($this->category->eagerLoad('category_description', 9));
+        $categorys = $this->category->eagerLoad('category_description', 9);
+        return view('backend.Category.index', compact('categorys'));
     }
 
     /**
@@ -61,8 +61,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return view('backend.Category.create')
-            ->withCategorys($this->category->eagerLoad('category_description'));
+        $categorys = $this->category->eagerLoad('category_description');
+        return view('backend.Category.create', compact('categorys'));
     }
 
     /**
@@ -110,10 +110,9 @@ class CategoryController extends Controller
     {
         $category = $this->category->findOrThrowException($id);
         $seo->set($category);
+        $categorys = $this->category->eagerLoad('category_description');
 
-        return view('backend.Category.show')
-            ->withCategory($category)
-            ->withCategorys($this->category->eagerLoad('category_description'));
+        return view('backend.Category.show', compact('category', 'categorys'));
     }
 
     /**
